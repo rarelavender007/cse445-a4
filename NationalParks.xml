@@ -53,7 +53,7 @@
     </Address>
   </NationalPark>
   
-  <NationalPark>
+  <NationalPark Rating="4.6">
     <Name>Rocky Mountain</Name>
     <Phone>970-586-1206</Phone>
     <Address NearestAirport="Denver">
@@ -78,7 +78,7 @@
     </Address>
   </NationalPark>
   
-  <NationalPark>
+  <NationalPark Rating="4.5">
     <Name>Glacier</Name>
     <Phone>406-888-7800</Phone>
     <Address NearestAirport="Glacier Park International">
@@ -103,7 +103,7 @@
     </Address>
   </NationalPark>
   
-  <NationalPark>
+  <NationalPark Rating="4.4">
     <Name>Great Smoky Mountains</Name>
     <Phone>865-436-1200</Phone>
     <Address NearestAirport="McGhee Tyson">
