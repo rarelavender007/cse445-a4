@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains intentional errors for testing validation -->
+<!-- ERROR 1: Wrong root element -->
 <NationalPark>
-  
+  <!-- ERROR 2: Missing required attribute -->
   <NationalPark Rating="4.9">
     <Name>Grand Canyon</Name>
     <Phone>928-638-7496</Phone>
@@ -13,7 +15,7 @@
       <Zip>86023</Zip>
     </Address>
   </NationalPark>
-  
+  <!-- ERROR 3: Missing phone -->
   <NationalPark>
     <Name>Yellowstone</Name>
     <Phone>307-344-7381</Phone>
@@ -25,7 +27,7 @@
       <Zip>82190</Zip>
     </Address>
   </NationalPark>
-  
+  <!-- ERROR 4: Broken closing tag -->
   <NationalPark Rating="4.7">
     <Name>Yosemite</Name>
     <Address>
@@ -36,7 +38,7 @@
       <Zip>95389</Zip>
     </Address>
   </NationalPark>
-  
+  <!-- ERROR 5: Duplicate Name -->
   <NationalPark Rating="4.6">
     <Name>Zion</Name>
     <Name>Zion National Park</Name>
