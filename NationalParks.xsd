@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- XSD schema defining structure of NationalParks XML -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <!-- Root element -->
   <xs:element name="NationalParks">
     <xs:complexType>
       <xs:sequence>
+        <!-- Multiple NationalPark elements allowed -->
         <xs:element name="NationalPark" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
+              <!-- Park name -->
               <xs:element name="Name" type="xs:string"/>
+              <!-- At least one phone required -->
               <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+              <!-- Address element -->
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
@@ -18,10 +24,12 @@
                     <xs:element name="State" type="xs:string"/>
                     <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
+                  <!-- Required attribute -->
                   <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+            <!-- Optional attribute -->
             <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
