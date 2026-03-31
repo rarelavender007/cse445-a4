@@ -8,35 +8,21 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" type="xs:string"/>
-              <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="Number" type="xs:string"/>
                     <xs:element name="Street" type="xs:string"/>
                     <xs:element name="City" type="xs:string"/>
-                    <xs:element name="State" type="xs:string">
-                      <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                          <xs:length value="2"/>
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
+                    <xs:element name="State" type="xs:string"/>
                     <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
                   <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="Rating" use="required">
-              <xs:simpleType>
-                <xs:restriction base="xs:decimal">
-                  <xs:minInclusive value="0.0"/>
-                  <xs:maxInclusive value="5.0"/>
-                  <xs:fractionDigits value="1"/>
-                </xs:restriction>
-              </xs:simpleType>
-            </xs:attribute>
+            <xs:attribute name="Rating" type="xs:decimal" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
